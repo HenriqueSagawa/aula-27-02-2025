@@ -85,43 +85,8 @@
       </h2>
 
       <!-- Contêiner dos cards de produtos -->
-      <div class="cards">
-        <!-- Card de produto: Amstel -->
-        <div class="card">
-          <span></span>
-          <div class="content">
-            <h1>Amstel</h1>
-            <!-- Botão para exibir mais informações -->
-            <button onclick="view()">Leia mais...</button>
-          </div>
-        </div>
-        <!-- Card de produto: Brahma -->
-        <div class="card">
-          <span></span>
-          <div class="content">
-            <h1>Brahma</h1>
-            <!-- Botão para exibir mais informações -->
-            <button onclick="view()">Leia mais...</button>
-          </div>
-        </div>
-        <!-- Card de produto: Dankel -->
-        <div class="card">
-          <span></span>
-          <div class="content">
-            <h1>Dankel</h1>
-            <!-- Botão para exibir mais informações -->
-            <button onclick="view()">Leia mais...</button>
-          </div>
-        </div>
-        <!-- Card de produto: Heineken -->
-        <div class="card">
-          <span></span>
-          <div class="content">
-            <h1>Heineken</h1>
-            <!-- Botão para exibir mais informações -->
-            <button onclick="view()">Leia mais...</button>
-          </div>
-        </div>
+      <div class="cards" id="cards-container">
+        <!-- Os cards serão inseridos aqui pelo JavaScript -->
       </div>
 
       <!--
@@ -138,14 +103,8 @@
         </button>
 
         <!-- Contêiner das abas -->
-        <div class="tab_box">
-          <!-- Botões das abas (inicialmente, a aba "Amstel" está ativa) -->
-          <button class="tab_btn active">Amstel</button>
-          <button class="tab_btn">Brahma</button>
-          <button class="tab_btn">Dankel</button>
-          <button class="tab_btn">Heineken</button>
-          <!-- Linha indicadora da aba ativa -->
-          <div class="line"></div>
+        <div class="tab_box" id="tab-box-container">
+          <!-- Os botões das abas serão inseridos aqui pelo JavaScript -->
         </div>
 
         <!--
@@ -156,59 +115,8 @@
           pode ser distribuído ou reutilizado independentemente do restante
           do conteúdo da página.
         -->
-        <article class="container_box">
-          <!--
-            Conteúdo da aba "Amstel" (inicialmente visível).
-            As tags <div> são usadas para agrupar elementos e aplicar estilos,
-            mas aqui poderiam ser substituídas por tags semânticas mais específicas,
-            dependendo do conteúdo.
-          -->
-          <div class="content_tab active">
-            <h2>Amstel</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur perspiciatis beatae necessitatibus soluta? Molestiae
-              cumque mollitia eligendi quia officiis voluptatem facere veniam
-              laboriosam? Saepe, nam laborum facilis magnam aspernatur
-              architecto.
-            </p>
-          </div>
-
-          <!-- Conteúdo da aba "Brahma" -->
-          <div class="content_tab">
-            <h2>Brahma</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur perspiciatis beatae necessitatibus soluta? Molestiae
-              cumque mollitia eligendi quia officiis voluptatem facere veniam
-              laboriosam? Saepe, nam laborum facilis magnam aspernatur
-              architecto.
-            </p>
-          </div>
-
-          <!-- Conteúdo da aba "Dankel" -->
-          <div class="content_tab">
-            <h2>Dankel</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur perspiciatis beatae necessitatibus soluta? Molestiae
-              cumque mollitia eligendi quia officiis voluptatem facere veniam
-              laboriosam? Saepe, nam laborum facilis magnam aspernatur
-              architecto.
-            </p>
-          </div>
-
-          <!-- Conteúdo da aba "Heineken" -->
-          <div class="content_tab">
-            <h2>Heineken</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur perspiciatis beatae necessitatibus soluta? Molestiae
-              cumque mollitia eligendi quia officiis voluptatem facere veniam
-              laboriosam? Saepe, nam laborum facilis magnam aspernatur
-              architecto.
-            </p>
-          </div>
+        <article class="container_box" id="content-box-container">
+          <!-- O conteúdo das abas será inserido aqui pelo JavaScript -->
         </article>
       </section>
     </main>
