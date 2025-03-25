@@ -1,507 +1,577 @@
+/* Importa a fonte Poppins do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap");
 
 /*
 Estilos Gerais
-Ínicio
+Início
 */
 
+/* Define as variáveis CSS (custom properties) para reutilização de cores e outros valores */
 :root {
-  --nav-color: #090d0b;
-  --laranja: #d97236;
-  --laranja-escuro: #8c4637;
-  --footer-color: #282c2f;
-  --footer-icons: #33383b;
-  --fonte-alternativa: #ccc;
-  --fundo: #212121;
+  --nav-color: #090d0b; /* Cor de fundo da barra de navegação */
+  --laranja: #d97236; /* Cor laranja principal */
+  --laranja-escuro: #8c4637; /* Variação mais escura da cor laranja */
+  --footer-color: #282c2f; /* Cor de fundo do rodapé */
+  --footer-icons: #33383b; /* Cor de fundo dos ícones no rodapé */
+  --fonte-alternativa: #ccc; /* Cor da fonte alternativa (cinza claro) */
+  --fundo: #212121; /* Cor de fundo geral da página */
 }
 
+/* Reseta as margens, preenchimentos e define o modelo de caixa para todos os elementos */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo do tamanho do elemento */
+  text-decoration: none; /* Remove sublinhados de links */
+  font-family: "Poppins", sans-serif; /* Define a fonte principal para Poppins ou uma fonte sans-serif genérica */
 }
 
+/* Estilos para o body */
 body {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--fundo);
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 100%; /* Ocupa toda a altura disponível */
+  display: flex; /* Usa o modelo de layout flexbox */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  justify-content: space-between; /* Distribui o espaço verticalmente entre os elementos */
+  background-color: var(--fundo); /* Define a cor de fundo usando a variável CSS */
 }
 
 /*Fim*/
 
 /*
-Estilos da navBar
-Ínicio
+Estilos da Navbr
+Início
 */
 
+/* Estilos para a barra de navegação */
 nav {
-  background-color: var(--nav-color);
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+  background-color: var(--nav-color); /* Define a cor de fundo usando a variável CSS */
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: space-between; /* Distribui o espaço horizontalmente entre os elementos */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding: 0 2rem; /* Adiciona preenchimento horizontal */
 }
 
+/* Estilos para a imagem do logo na barra de navegação */
 nav .logo-img {
-  max-width: 9rem;
-  height: fit-content;
+  max-width: 9rem; /* Define a largura máxima da imagem */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
 }
 
+/* Estilos para as imagens dentro da lista não ordenada na barra de navegação */
 nav ul img {
-  width: 3rem;
-  height: fit-content;
-  border-radius: 50%;
-  border: 3px solid var(--laranja-escuro);
-  background-color: var(--laranja);
-  padding: 0.5rem;
+  width: 3rem; /* Define a largura da imagem */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  border-radius: 50%; /* Transforma a imagem em um círculo */
+  border: 3px solid var(--laranja-escuro); /* Adiciona uma borda usando a variável CSS */
+  background-color: var(--laranja); /* Define a cor de fundo usando a variável CSS */
+  padding: 0.5rem; /* Adiciona preenchimento */
 }
 
+/* Estilos para a lista não ordenada na barra de navegação */
 nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+  display: flex; /* Usa o modelo de layout flexbox */
+  gap: 1.5rem; /* Adiciona um espaçamento entre os itens */
+  list-style: none; /* Remove os marcadores da lista */
 }
 
+/* Estilos para os itens da lista na barra de navegação */
 nav ul li {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: var(--fonte-alternativa);
-  font-size: 12px;
-  position: relative;
+  display: flex; /* Usa o modelo de layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 5px; /* Adiciona um espaçamento entre os elementos */
+  color: var(--fonte-alternativa); /* Define a cor da fonte usando a variável CSS */
+  font-size: 12px; /* Define o tamanho da fonte */
+  position: relative; /* Define o posicionamento como relativo para posicionar elementos filhos */
 }
 
 /*Fim*/
 
 /*
 Estilos de Header
-Ínicio
+Início
 */
 
+/* Estilos para o cabeçalho */
 header {
-  width: 100%;
-  height: fit-content;
-  min-height: 472px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  min-height: 472px; /* Define uma altura mínima */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  position: relative; /* Define o posicionamento como relativo para posicionar elementos filhos */
 
-  background-image: url(../imagens/header-fundo.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(../imagens/header-fundo.webp); /* Define a imagem de fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+  background-size: cover; /* Ajusta a imagem de fundo para cobrir todo o elemento */
 }
 
+/* Estilos para a pseudo-classe ::after do cabeçalho (overlay escuro) */
 header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #000;
-  opacity: 0.7;
+  content: ""; /* Conteúdo vazio */
+  position: absolute; /* Define o posicionamento como absoluto */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  top: 0; /* Alinha ao topo */
+  bottom: 0; /* Alinha à base */
+  background-color: #000; /* Define a cor de fundo como preto */
+  opacity: 0.7; /* Define a opacidade para 70% */
 }
 
+/* Estilos para o conteúdo dentro do cabeçalho */
 header .content {
-  width: 90%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  width: 90%; /* Define a largura como 90% do elemento pai */
+  height: 100%; /* Ocupa toda a altura disponível */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  align-content: center; /* Alinha os itens verticalmente ao centro (quando há múltiplas linhas) */
+  flex-direction: column; /* Organiza os elementos em coluna */
 
-  text-align: center;
-  color: #fff;
+  text-align: center; /* Alinha o texto ao centro */
+  color: #fff; /* Define a cor da fonte como branco */
 
-  z-index: 1;
+  z-index: 1; /* Define a ordem de empilhamento para ficar acima do overlay */
 }
 
+/* Estilos para o primeiro parágrafo dentro do cabeçalho */
 header p:nth-child(1) {
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  font-size: 2rem; /* Define o tamanho da fonte */
+  display: flex; /* Usa o modelo de layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+  gap: 1rem; /* Adiciona um espaçamento entre os elementos */
 }
 
+/* Estilos para o span dentro do primeiro parágrafo do cabeçalho (linhas decorativas) */
 header p:nth-child(1) span {
-  width: 5rem;
-  height: 1px;
-  background-color: #fff;
+  width: 5rem; /* Define a largura */
+  height: 1px; /* Define a altura */
+  background-color: #fff; /* Define a cor de fundo como branco */
 }
 
+/* Estilos para o link dentro do cabeçalho */
 header a {
-  width: fit-content;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  border: 3px solid var(--laranja);
-  color: var(--laranja);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  width: fit-content; /* Largura se ajusta ao conteúdo */
+  margin: 1rem auto; /* Define margens superior e inferior, e centraliza horizontalmente */
+  padding: 0.5rem 1rem; /* Adiciona preenchimento */
+  background-color: transparent; /* Define o fundo como transparente */
+  border: 3px solid var(--laranja); /* Adiciona uma borda usando a variável CSS */
+  color: var(--laranja); /* Define a cor da fonte usando a variável CSS */
+  cursor: pointer; /* Define o cursor como uma mão */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
 }
 
+/* Estilos para o link dentro do cabeçalho quando o mouse passa por cima */
 header a:hover {
-  background-color: var(--laranja);
-  color: #fff;
+  background-color: var(--laranja); /* Define a cor de fundo usando a variável CSS */
+  color: #fff; /* Define a cor da fonte como branco */
 }
 
+/* Estilos para o título (h1) dentro do cabeçalho */
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3.5rem; /* Define o tamanho da fonte */
 }
 
+/* Estilos para o terceiro parágrafo dentro do cabeçalho */
 header p:nth-child(3) {
-  font-size: 0.8rem;
+  font-size: 0.8rem; /* Define o tamanho da fonte */
 }
 
+/* Estilos para a tag main */
 main {
-  color: #fff;
-  padding: 2rem;
-  flex-grow: 1;
+  color: #fff; /* Define a cor da fonte como branco */
+  padding: 2rem; /* Adiciona preenchimento */
+  flex-grow: 1; /* Permite que a tag main cresça para ocupar o espaço restante */
 }
 
+/* Estilos para a tag main h2 */
 main h2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: fit-content;
-  gap: 0.5rem;
+  display: flex; /* Usa o modelo de layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui o espaço horizontalmente entre os elementos */
+  width: fit-content; /* Largura se ajusta ao conteúdo */
+  gap: 0.5rem; /* Adiciona um espaçamento entre os elementos */
 }
 
+/* Estilos para a classe .text (seção de detalhes do produto) */
 .text {
-  width: 90%;
-  height: 90vh;
-  background-color: var(--footer-icons);
-  padding: 3rem;
-  border-radius: 1rem;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  display: none;
-  transition: all 0.3s ease;
-  z-index: 1;
-  overflow-y: auto;
+  width: 90%; /* Define a largura como 90% do elemento pai */
+  height: 90vh; /* Define a altura como 90% da altura da viewport */
+  background-color: var(--footer-icons); /* Define a cor de fundo usando a variável CSS */
+  padding: 3rem; /* Adiciona preenchimento */
+  border-radius: 1rem; /* Adiciona um raio à borda */
+  position: fixed; /* Define o posicionamento como fixo */
+  left: 50%; /* Alinha à esquerda no centro */
+  transform: translate(-50%, -50%); /* Centraliza o elemento */
+  top: 50%; /* Alinha ao topo no centro */
+  display: none; /* Oculta o elemento inicialmente */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+  z-index: 1; /* Define a ordem de empilhamento para ficar acima de outros elementos */
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
 }
 
+/* Estilos para o botão de fechar dentro da classe .text */
 .text button.close {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+  background-color: transparent; /* Define o fundo como transparente */
+  border: none; /* Remove a borda */
+  color: #fff; /* Define a cor da fonte como branco */
+  cursor: pointer; /* Define o cursor como uma mão */
+  position: absolute; /* Define o posicionamento como absoluto */
+  right: 1rem; /* Alinha à direita */
+  top: 1rem; /* Alinha ao topo */
 }
 
+/* Estilos para o span dentro do botão de fechar */
 .text button span {
-  font-size: 2rem;
+  font-size: 2rem; /* Define o tamanho da fonte */
 }
 
+/* Estilos para a classe .card (card de produto) */
 .card {
-  width: 100%;
-  max-width: 275px;
-  height: fit-content;
-  border: 1px solid var(--laranja);
-  border-radius: 8px;
-  padding: 1rem;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 275px; /* Define uma largura máxima */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  border: 1px solid var(--laranja); /* Adiciona uma borda usando a variável CSS */
+  border-radius: 8px; /* Adiciona um raio à borda */
+  padding: 1rem; /* Adiciona preenchimento */
 }
 
+/* Estilos para o span dentro da classe .card (imagem do produto) */
 .card span {
-  width: 100%;
-  height: 8rem;
-  display: block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 8rem; /* Define a altura */
+  display: block; /* Define o elemento como um bloco */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+  background-size: cover; /* Ajusta a imagem de fundo para cobrir todo o elemento */
 }
 
+/* Estilos para a imagem do produto Heineken */
 .card:nth-child(4) span {
-  background-image: url("../imagens/heineken.webp");
+  background-image: url("../imagens/heineken.webp"); /* Define a imagem de fundo */
 }
 
+/* Estilos para a imagem do produto Amstel */
 .card:nth-child(1) span {
-  background-image: url("../imagens/amstel.webp");
+  background-image: url("../imagens/amstel.webp"); /* Define a imagem de fundo */
 }
 
+/* Estilos para a imagem do produto Brahma */
 .card:nth-child(2) span {
-  background-image: url("../imagens/brahma.webp");
-
+  background-image: url("../imagens/brahma.webp"); /* Define a imagem de fundo */
 }
 
+/* Estilos para a imagem do produto Dankel */
 .card:nth-child(3) span {
-  background-image: url("../imagens/dankel.webp");
-
+  background-image: url("../imagens/dankel.webp"); /* Define a imagem de fundo */
 }
 
+/* Estilos para o título (h1) dentro da classe .card */
 .card h1 {
-  color: var(--laranja-escuro);
+  color: var(--laranja-escuro); /* Define a cor da fonte usando a variável CSS */
 }
 
+/* Estilos para o botão dentro da classe .card */
 .card button {
-  border: none;
-  background-color: transparent;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border: none; /* Remove a borda */
+  background-color: transparent; /* Define o fundo como transparente */
+  color: #fff; /* Define a cor da fonte como branco */
+  font-size: 1rem; /* Define o tamanho da fonte */
+  cursor: pointer; /* Define o cursor como uma mão */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
 }
 
+/* Estilos para o botão dentro da classe .card quando o mouse passa por cima */
 .card button:hover {
-  color: #ccc;
+  color: #ccc; /* Define a cor da fonte como cinza claro */
 }
 
+/* Estilos para a classe .content dentro da classe .card */
 .card .content {
-  padding: 0.5rem;
+  padding: 0.5rem; /* Adiciona preenchimento */
 }
 
+/* Estilos para a classe .cards (container dos cards de produtos) */
 .cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 2rem 1rem;
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: space-evenly; /* Distribui o espaço horizontalmente entre os elementos */
+  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+  padding: 2rem 1rem; /* Adiciona preenchimento */
 }
 
+/* Estilos para a tag footer */
 footer {
-  background-color: var(--footer-color);
-  width: 100%;
-  height: fit-content;
-  padding: 2rem 3rem;
-  display: flex;
-  justify-content: space-around;
+  background-color: var(--footer-color); /* Define a cor de fundo usando a variável CSS */
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  padding: 2rem 3rem; /* Adiciona preenchimento */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: space-around; /* Distribui o espaço horizontalmente entre os elementos */
 }
 
+/* Estilos para a classe .info (informações de contato no rodapé) */
 .info {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  width: fit-content; /* Largura se ajusta ao conteúdo */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  display: flex; /* Usa o modelo de layout flexbox */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  gap: 1rem; /* Adiciona um espaçamento entre os elementos */
 }
 
+/* Estilos para a classe .icon (ícone e texto no rodapé) */
 .icon {
-  display: flex;
-  gap: 0.5rem;
-  color: #fff;
+  display: flex; /* Usa o modelo de layout flexbox */
+  gap: 0.5rem; /* Adiciona um espaçamento entre os elementos */
+  color: #fff; /* Define a cor da fonte como branco */
 }
 
+/* Estilos para a imagem dentro da classe .icon */
 .icon img {
-  width: 3.5rem;
-  background-color: var(--footer-icons);
-  padding: 0.8rem;
-  border-radius: 50%;
+  width: 3.5rem; /* Define a largura */
+  background-color: var(--footer-icons); /* Define a cor de fundo usando a variável CSS */
+  padding: 0.8rem; /* Adiciona preenchimento */
+  border-radius: 50%; /* Transforma a imagem em um círculo */
 }
 
+/* Estilos para a classe .about (seção "Sobre Nós" no rodapé) */
 .about {
-  width: fit-content;
-  max-width: 300px;
-  height: fit-content;
+  width: fit-content; /* Largura se ajusta ao conteúdo */
+  max-width: 300px; /* Define uma largura máxima */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
 }
 
+/* Estilos para o título (h3) dentro da classe .about */
 .about h3 {
-  color: #fff;
+  color: #fff; /* Define a cor da fonte como branco */
 }
 
+/* Estilos para o parágrafo dentro da classe .about */
 .about p {
-  color: #ccc;
-  margin: 0.5rem 0;
+  color: #ccc; /* Define a cor da fonte como cinza claro */
+  margin: 0.5rem 0; /* Adiciona margens superior e inferior */
 }
 
+/* Estilos para a imagem dentro da classe .about */
 .about img {
-  width: 2rem;
-  background-color: var(--footer-icons);
-  padding: 5px;
-  border-radius: 4px;
+  width: 2rem; /* Define a largura */
+  background-color: var(--footer-icons); /* Define a cor de fundo usando a variável CSS */
+  padding: 5px; /* Adiciona preenchimento */
+  border-radius: 4px; /* Adiciona um raio à borda */
 }
 
+/* Estilos para a imagem dentro da classe .about que é precedida por outra imagem */
 .about img+img {
-  margin: 0 0.5rem;
+  margin: 0 0.5rem; /* Adiciona margem horizontal */
 }
 
 /*Estilização Tabs*/
 
+/* Estilos para a classe .tab_box (container das abas) */
 .tab_box {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 2px solid rgb(229, 229, 229);
-  font-size: 18px;
-  font-weight: 600;
-  position: relative;
+  width: 100%; /* Ocupa toda a largura disponível */
+  display: flex; /* Usa o modelo de layout flexbox */
+  justify-content: space-around; /* Distribui o espaço horizontalmente entre os elementos */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+  border-bottom: 2px solid rgb(229, 229, 229); /* Adiciona uma borda inferior */
+  font-size: 18px; /* Define o tamanho da fonte */
+  font-weight: 600; /* Define a espessura da fonte */
+  position: relative; /* Define o posicionamento como relativo para posicionar elementos filhos */
 }
 
+/* Estilos para a classe .tab_btn (botão da aba) */
 .tab_btn {
-  flex: 1;
-  font-size: 18px;
-  font-weight: 600;
-  color: #919191;
-  background: none;
-  border: none;
-  padding: 18px;
-  cursor: pointer;
+  flex: 1; /* Permite que os elementos cresçam igualmente */
+  font-size: 18px; /* Define o tamanho da fonte */
+  font-weight: 600; /* Define a espessura da fonte */
+  color: #919191; /* Define a cor da fonte */
+  background: none; /* Define o fundo como transparente */
+  border: none; /* Remove a borda */
+  padding: 18px; /* Adiciona preenchimento */
+  cursor: pointer; /* Define o cursor como uma mão */
 }
 
+/* Estilos para a classe .container_box (container do conteúdo da aba) */
 .container_box {
-  padding: 20px;
+  padding: 20px; /* Adiciona preenchimento */
 }
 
+/* Estilos para a classe .content_tab (conteúdo da aba) */
 .content_tab {
-  display: none;
-  animation: moving 0.5s ease;
-  margin-top: 1rem;
+  display: none; /* Oculta o elemento inicialmente */
+  animation: moving 0.5s ease; /* Adiciona uma animação suave */
+  margin-top: 1rem; /* Adiciona uma margem superior */
 }
 
+/* Define a animação "moving" */
 @keyframes moving {
   from {
-    transform: translateX(50px);
-    opacity: 0;
+    transform: translateX(50px); /* Inicia 50 pixels à direita */
+    opacity: 0; /* Inicia com opacidade 0 */
   }
 
   to {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(0); /* Termina na posição original */
+    opacity: 1; /* Termina com opacidade 1 */
   }
 }
 
+/* Estilos para o título (h2) dentro da classe .container_tab */
 .container_tab h2 {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Adiciona uma margem inferior */
 }
 
+/* Estilos para a classe .tab_btn quando está ativa */
 .tab_btn.active {
-  color: var(--laranja);
+  color: var(--laranja); /* Define a cor da fonte usando a variável CSS */
 }
 
+/* Estilos para a classe .line (linha indicadora da aba ativa) */
 .line {
-  position: absolute;
-  top: 57px;
-  left: 0;
-  height: 5px;
-  width: 25%;
-  background-color: var(--laranja);
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  position: absolute; /* Define o posicionamento como absoluto */
+  top: 57px; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  height: 5px; /* Define a altura */
+  width: 25%; /* Define a largura */
+  background-color: var(--laranja); /* Define a cor de fundo usando a variável CSS */
+  border-radius: 10px; /* Adiciona um raio à borda */
+  transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
 }
 
+/* Estilos para a classe .content_tab quando está ativa */
 .content_tab.active {
-  display: block;
+  display: block; /* Mostra o elemento */
 }
 
 /*Responsividade*/
 
-
-
+/* Media query para telas com largura máxima de 767px */
 @media (max-width: 767px) {
+  /* Estilos para o rodapé */
   footer {
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 2rem; /* Adiciona um espaçamento entre os elementos */
   }
 
+  /* Estilos para a classe .cards */
   .cards {
-    gap: 1rem;
+    gap: 1rem; /* Adiciona um espaçamento entre os elementos */
   }
 }
 
+/* Media query para telas com largura máxima de 500px */
 @media (max-width: 500px) {
+  /* Estilos para o conteúdo dentro do cabeçalho */
   header .content {
-    gap: 0.5rem !important;
+    gap: 0.5rem !important; /* Adiciona um espaçamento entre os elementos (importante para sobrescrever outros estilos) */
   }
 
+  /* Estilos para o primeiro parágrafo dentro do cabeçalho */
   header p:nth-child(1) {
-    display: none;
+    display: none; /* Oculta o elemento */
   }
 
+  /* Estilos para o título (h1) dentro do cabeçalho */
   header h1 {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem !important; /* Define o tamanho da fonte (importante para sobrescrever outros estilos) */
   }
 }
 
+/* Media query para telas com largura máxima de 600px */
 @media (max-width: 600px) {
+  /* Estilos para a classe .tab_box */
   .tab_box {
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
   }
 
+  /* Estilos para a classe .line */
   .line {
-    display: none;
+    display: none; /* Oculta o elemento */
   }
 
+  /* Estilos para a classe .tab_btn quando está ativa */
   .tab_btn.active {
-    border-bottom: 3px solid var(--laranja);
+    border-bottom: 3px solid var(--laranja); /* Adiciona uma borda inferior */
   }
 
+  /* Estilos para o parágrafo dentro do item de lista na barra de navegação */
   nav ul li p::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #212121;
-    position: absolute;
-    top: -8px;
-    right: 0;
+    content: ""; /* Conteúdo vazio */
+    width: 0; /* Define a largura */
+    height: 0; /* Define a altura */
+    border-left: 8px solid transparent; /* Adiciona uma borda transparente à esquerda */
+    border-right: 8px solid transparent; /* Adiciona uma borda transparente à direita */
+    border-bottom: 8px solid #212121; /* Adiciona uma borda inferior */
+    position: absolute; /* Define o posicionamento como absoluto */
+    top: -8px; /* Alinha ao topo */
+    right: 0; /* Alinha à direita */
   }
 
+  /* Estilos para o parágrafo dentro do item de lista na barra de navegação */
   nav ul li p {
-    background-color: #212121;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    padding: 0.4rem;
-    border-radius: 5px 0 5px 5px;
-    z-index: 1;
-    width: 120px;
-    display: none;
+    background-color: #212121; /* Define a cor de fundo */
+    position: absolute; /* Define o posicionamento como absoluto */
+    top: 60px; /* Alinha ao topo */
+    right: 0; /* Alinha à direita */
+    padding: 0.4rem; /* Adiciona preenchimento */
+    border-radius: 5px 0 5px 5px; /* Adiciona um raio à borda */
+    z-index: 1; /* Define a ordem de empilhamento */
+    width: 120px; /* Define a largura */
+    display: none; /* Oculta o elemento */
   }
 
+  /* Estilos para o parágrafo dentro do item de lista na barra de navegação quando o item está ativo */
   nav ul li.active p {
-    display: block;
+    display: block; /* Mostra o elemento */
   }
 
+  /* Estilos para a imagem dentro do item de lista na barra de navegação */
   nav ul li img {
-    cursor: pointer;
-    transition: all 0.3s ease;
+    cursor: pointer; /* Define o cursor como uma mão */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
   }
 
+  /* Estilos para a imagem dentro do item de lista na barra de navegação quando o mouse passa por cima */
   nav ul li img:hover {
-    transform: scale(0.98);
+    transform: scale(0.98); /* Diminui a escala */
   }
 
+  /* Estilos para a imagem dentro do item de lista na barra de navegação quando está ativa */
   nav ul li img:active {
-    transform: scale(0.91);
+    transform: scale(0.91); /* Diminui ainda mais a escala */
   }
 }
 
+/* Media query para telas com largura máxima de 300px */
 @media (max-width: 300px) {
+  /* Estilos para a barra de navegação */
   nav {
-    flex-direction: column;
-    align-items: start;
-    padding: 12px 5px;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: start; /* Alinha os itens ao início */
+    padding: 12px 5px; /* Adiciona preenchimento */
   }
 
+  /* Estilos para a classe .card */
   .card {
-    width: 200px;
+    width: 200px; /* Define a largura */
   }
 
-  .card h1{
-    font-size: auto;
+  /* Estilos para o título (h1) dentro da classe .card */
+  .card h1 {
+    font-size: auto; /* Define o tamanho da fonte como automático */
   }
 
+  /* Estilos para o título (h1) dentro do cabeçalho */
   header h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem !important; /* Define o tamanho da fonte (importante para sobrescrever outros estilos) */
   }
 
+  /* Estilos para a classe .icon dentro do rodapé */
   .footer .icon {
-    flex-direction: column !important;
+    flex-direction: column !important; /* Organiza os elementos em coluna (importante para sobrescrever outros estilos) */
   }
-
 }
